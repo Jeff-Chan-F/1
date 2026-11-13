@@ -1,0 +1,15 @@
+# Cloudflare Pages 重定向规则
+# 作用：让 https://1-aqh.pages.dev/ 直接打开真正的首页
+#
+# 【放置位置】仓库根目录，与 README.md 同级（也就是构建输出目录）
+#   正确： /_redirects
+#   错误： /1/_redirects  或  /1/HTML/_redirects
+#
+# 【生效方式】推送后 Cloudflare 会自动重新部署，无需任何后台设置
+# 【回滚方式】删除本文件并推送即可
+
+# 根路径 -> 首页（302 临时跳转）
+/  /1/HTML/%E9%A6%96%E9%A1%B5%E7%A7%91%E6%99%AE  302
+
+# 兼容 /index.html 的访问（可选）
+/index.html  /1/HTML/%E9%A6%96%E9%A1%B5%E7%A7%91%E6%99%AE  302
