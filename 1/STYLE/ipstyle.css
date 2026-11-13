@@ -1,0 +1,266 @@
+.ip-main {
+    background:
+        radial-gradient(760px 440px at 94% 2%, rgba(247, 201, 106, 0.16), transparent 62%),
+        radial-gradient(640px 420px at 2% 52%, rgba(169, 192, 102, 0.13), transparent 66%),
+        var(--paper);
+}
+
+.ip-showcase {
+    padding: clamp(46px, 6vw, 82px) 0 clamp(8px, 1.6vw, 18px);
+}
+
+.ip-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 0.84fr) minmax(0, 1.16fr);
+    gap: clamp(30px, 4.6vw, 64px);
+    align-items: center;
+}
+
+.ip-sticker {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    margin: 0;
+    justify-self: center;
+    padding: clamp(10px, 1.4vw, 16px);
+    border-radius: 26px;
+    background: #fff;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 30px 58px -34px rgba(9, 22, 43, 0.45);
+    transform: rotate(-2.4deg);
+    transition: transform 0.7s var(--ease), box-shadow 0.7s var(--ease);
+}
+
+.ip-sticker::after {
+    content: "";
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    width: 92px;
+    height: 24px;
+    transform: translateX(-50%) rotate(-2deg);
+    border-radius: 3px;
+    background: linear-gradient(180deg, rgba(247, 201, 106, 0.6), rgba(247, 201, 106, 0.34));
+    box-shadow: 0 3px 8px rgba(9, 22, 43, 0.08);
+    pointer-events: none;
+}
+
+.ip-sticker img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+}
+
+.ip-sticker:hover {
+    transform: rotate(0deg) translateY(-6px);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 40px 68px -34px rgba(9, 22, 43, 0.5);
+}
+
+.ip-intro-body .h2 {
+    margin-top: 14px;
+}
+
+.ip-intro-body > p {
+    margin-top: 16px;
+    font-size: 16.5px;
+    line-height: 1.95;
+    color: var(--text-soft);
+}
+
+.ip-specs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: clamp(22px, 3vw, 32px);
+    border-top: 1px solid rgba(29, 48, 67, 0.1);
+}
+
+.ip-specs div {
+    padding: 14px 0 13px;
+    border-bottom: 1px solid rgba(29, 48, 67, 0.1);
+}
+
+.ip-specs div:nth-child(odd) {
+    padding-right: 18px;
+}
+
+.ip-specs dt {
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    color: var(--text-soft);
+}
+
+.ip-specs dd {
+    margin-top: 5px;
+    font-family: var(--font-serif);
+    font-size: 16.5px;
+    color: var(--ink-800);
+}
+
+.ip-swatches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.ip-swatches li {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12.5px;
+    letter-spacing: 0.08em;
+    color: var(--text-soft);
+}
+
+.ip-swatches span {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--c);
+    box-shadow: inset 0 0 0 1px rgba(9, 22, 43, 0.14);
+}
+
+.ip-turnaround {
+    margin: clamp(38px, 5vw, 66px) 0 0;
+    padding: clamp(18px, 3vw, 34px) clamp(16px, 3vw, 38px) clamp(14px, 2vw, 18px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: var(--radius-xl);
+    background: radial-gradient(120% 130% at 50% 0%, #fffdf8 0%, #f7efe1 58%, #efe2cd 100%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), var(--shadow);
+    text-align: center;
+}
+
+.ip-turnaround img {
+    display: block;
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.ip-turnaround figcaption {
+    margin-top: 10px;
+    font-family: var(--font-serif);
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    color: var(--text-soft);
+}
+
+.ip-expressions {
+    padding: clamp(52px, 7vw, 96px) 0 clamp(72px, 9vw, 112px);
+}
+
+.ip-section-head {
+    max-width: 660px;
+    margin-bottom: clamp(26px, 4vw, 44px);
+}
+
+.ip-section-head .h2 {
+    margin-top: 14px;
+}
+
+.ip-section-head p {
+    margin-top: 14px;
+    font-size: 16px;
+    line-height: 1.95;
+    color: var(--text-soft);
+}
+
+.expression-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(14px, 1.8vw, 22px);
+}
+
+.expression-card {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 12px 12px 16px;
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 18px 34px -26px rgba(9, 22, 43, 0.38);
+    transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease);
+}
+
+.expression-card:hover {
+    transform: translateY(-7px);
+    box-shadow: inset 0 0 0 1px rgba(247, 201, 106, 0.55), 0 30px 52px -28px rgba(9, 22, 43, 0.44);
+}
+
+.expression-media {
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+    border-radius: 14px;
+    background: #fff;
+}
+
+.expression-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.7s var(--ease);
+}
+
+.expression-card:hover .expression-media img {
+    transform: scale(1.05) rotate(-1deg);
+}
+
+.expression-card figcaption {
+    margin-top: 12px;
+    font-size: 13px;
+    line-height: 1.7;
+    text-align: center;
+    color: var(--text-soft);
+}
+
+.expression-grid .expression-card:nth-child(4n + 1) { --d: 0ms; }
+.expression-grid .expression-card:nth-child(4n + 2) { --d: 70ms; }
+.expression-grid .expression-card:nth-child(4n + 3) { --d: 140ms; }
+.expression-grid .expression-card:nth-child(4n + 4) { --d: 210ms; }
+
+@media (max-width: 1000px) {
+    .expression-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .ip-intro {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .ip-sticker {
+        max-width: 360px;
+    }
+}
+
+@media (max-width: 760px) {
+    .expression-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .expression-card {
+        padding: 9px 9px 13px;
+        border-radius: 18px;
+    }
+
+    .expression-card figcaption {
+        margin-top: 10px;
+        font-size: 12.5px;
+    }
+}
+
+@media (max-width: 380px) {
+    .ip-specs {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .ip-specs div:nth-child(odd) {
+        padding-right: 0;
+    }
+}
